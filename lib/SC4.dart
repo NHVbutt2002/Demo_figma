@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:demolocal1/main.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SC4 extends StatefulWidget {
   const SC4({super.key});
@@ -47,8 +48,10 @@ class _SC4State extends State<SC4> {
             width: 400,
             padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: ElevatedButton(
-                onPressed: () {
-                  onPressed:
+                onPressed: () async {
+                  final SharedPreferences prefs =
+                      await SharedPreferences.getInstance();
+                  await prefs.setBool('show', true);
                   Navigator.of(context).pushNamed('/ScLogin');
                 },
                 style: ElevatedButton.styleFrom(
