@@ -130,7 +130,9 @@ class _Home1ScreenState extends State<Home1Screen> {
             ),
           ),
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('/Setting');
+              },
               child: Text('Log out',
                   style: TextStyle(
                       fontSize: 14,
@@ -149,7 +151,7 @@ class _Home1ScreenState extends State<Home1Screen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: 'Settings',
+            label: 'Setting',
           ),
         ]));
   }

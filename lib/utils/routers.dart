@@ -4,6 +4,7 @@ import 'package:demolocal1/onbroading.dart';
 import 'package:demolocal1/Sc_Signup.dart';
 import 'package:demolocal1/Sc_login1.dart';
 import 'package:demolocal1/main.dart';
+import 'package:demolocal1/setting.dart';
 
 import 'package:demolocal1/utils/router_constants.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,8 @@ class RouterUtils {
         return MaterialPageRoute(builder: (_) => const SignUp());
       case home1Router:
         return MaterialPageRoute(builder: (_) => const Home1Screen());
+      case settingRouter:
+        return MaterialPageRoute(builder: (_) => const Setting());
 
       default:
         return MaterialPageRoute(
