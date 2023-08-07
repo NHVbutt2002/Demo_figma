@@ -117,7 +117,7 @@ class _ScLoginState extends State<ScLogin> {
                           } else {
                             print('Không Hợp Lệ');
                           }
-                          Navigator.of(context).pushNamed('/SC2');
+                          Navigator.of(context).pushNamed('/HomeScreen');
                         },
                         style: ElevatedButton.styleFrom(
                           primary: Color(0xffE3562A),

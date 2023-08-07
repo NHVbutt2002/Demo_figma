@@ -6,3 +6,5 @@ const String scLoginRouter = '/ScLogin';
 const String signUpRouter = '/SignUp';
 const String home1Router = '/Home1Screen';
 const String settingRouter = '/Setting';
+const String homeRouter = '/HomeScreen';
+const String enterjobRouter = '/EnterjobScreen';

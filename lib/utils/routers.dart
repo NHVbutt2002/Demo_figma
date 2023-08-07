@@ -1,4 +1,6 @@
+import 'package:demolocal1/%20Enter_job.dart';
 import 'package:demolocal1/Home1_page.dart';
+import 'package:demolocal1/Home_page.dart';
 import 'package:demolocal1/onbroading.dart';
 
 import 'package:demolocal1/Sc_Signup.dart';
@@ -8,6 +10,7 @@ import 'package:demolocal1/setting.dart';
 
 import 'package:demolocal1/utils/router_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl_browser.dart';
 
 class RouterUtils {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -25,6 +28,10 @@ class RouterUtils {
         return MaterialPageRoute(builder: (_) => const Home1Screen());
       case settingRouter:
         return MaterialPageRoute(builder: (_) => const Setting());
+      case homeRouter:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case enterjobRouter:
+        return MaterialPageRoute(builder: (_) => const EnterjobScreen());
 
       default:
         return MaterialPageRoute(
