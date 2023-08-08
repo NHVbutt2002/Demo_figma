@@ -10,7 +10,6 @@ import 'package:demolocal1/setting.dart';
 
 import 'package:demolocal1/utils/router_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl_browser.dart';
 
 class RouterUtils {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -31,7 +30,12 @@ class RouterUtils {
       case homeRouter:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case enterjobRouter:
-        return MaterialPageRoute(builder: (_) => const EnterjobScreen());
+        final aguments = settings.arguments as Map<String, dynamic>;
+        return MaterialPageRoute(
+            builder: (_) => EnterjobScreen(
+                  items: aguments['item'],
+                  isEdit: aguments['isEdit'],
+                ));
 
       default:
         return MaterialPageRoute(

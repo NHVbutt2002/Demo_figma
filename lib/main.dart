@@ -1,18 +1,11 @@
 import 'dart:async';
 
-import 'package:demolocal1/onbroading.dart';
-
-import 'package:demolocal1/Sc_Signup.dart';
-import 'package:demolocal1/Sc_login1.dart';
 import 'package:demolocal1/gen/localization/l10n.dart';
 import 'package:demolocal1/save/AppPreferences.dart';
 import 'package:demolocal1/utils/router_constants.dart';
 import 'package:demolocal1/utils/routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:intl/intl_browser.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

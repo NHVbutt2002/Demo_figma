@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl_browser.dart';
+import 'package:intl/intl.dart';
+import 'package:demolocal1/model/todo_model.dart';
 
 class EnterjobScreen extends StatefulWidget {
   const EnterjobScreen({Key? key, this.isEdit = false, required this.items})
@@ -11,7 +12,7 @@ class EnterjobScreen extends StatefulWidget {
   _EnterjobScreenState createState() => _EnterjobScreenState();
 }
 
-class _EnterjobScreenState extends State<AddTodo> {
+class _EnterjobScreenState extends State<EnterjobScreen> {
   TextEditingController titleController = TextEditingController();
   TextEditingController content = TextEditingController();
   TextEditingController timeController = TextEditingController();
