@@ -31,6 +31,8 @@ class _EnterjobScreenState extends State<EnterjobScreen> {
     }
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

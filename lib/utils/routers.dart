@@ -1,6 +1,6 @@
-import 'package:demolocal1/%20Enter_job.dart';
-import 'package:demolocal1/Home1_page.dart';
-import 'package:demolocal1/Home_page.dart';
+import 'package:demolocal1/%20enter_job.dart';
+import 'package:demolocal1/home1_page.dart';
+import 'package:demolocal1/home_page.dart';
 import 'package:demolocal1/onbroading.dart';
 
 import 'package:demolocal1/Sc_Signup.dart';
