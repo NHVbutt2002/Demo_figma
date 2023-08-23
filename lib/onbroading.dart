@@ -1,10 +1,6 @@
-import 'dart:async';
-
-import 'package:demolocal1/page.dart';
-import 'package:demolocal1/save/AppPreferences.dart';
 import 'package:flutter/material.dart';
-
-import 'gen/localization/l10n.dart';
+import 'package:myappfigma/Intro.dart';
+import 'package:myappfigma/l10n/save/AppPreferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Onbroading extends StatefulWidget {
@@ -19,27 +15,26 @@ class _SC2State extends State<Onbroading> {
   int currPage = 0;
   final listImage = [
     {
-      "image": "assets/SC3.jpg",
+      "image": "assets/Sc1.png",
       "title": "Học mọi lúc mọi nơi",
       "description":
-          "Cách ly là thời điểm hoàn hảo để dành \n ngày của bạn để học điều gì đó mới, từ mọi nơi",
+          "Quarantine is the perfect time to spend your \n day learning something new, from anywhere!"
     },
     {
-      "image": "assets/SC2.jpg",
+      "image": "assets/Sc2.png",
       "title": "Find a course \n      for you",
       "description":
           "Quarantine is the perfect time to spend your \n day learning something new, from anywhere!",
     },
     {
-      "image": "assets/SC1.jpg",
+      "image": "assets/SC3.png",
       "title": "Improve your skills",
       "description":
-          "Cách ly là thời điểm hoàn hảo để dành \n ngày của bạn để học điều gì đó mới, từ mọi nơi",
+          "Quarantine is the perfect time to spend your \n day learning something new, from anywhere!"
     }
   ];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller = PageController(initialPage: currPage);
   }
@@ -64,7 +59,7 @@ class _SC2State extends State<Onbroading> {
               itemBuilder: (BuildContext context, int i) {
                 final item = listImage[i];
 
-                return Page1(
+                return Intro1(
                   item["title"].toString(),
                   item["description"].toString(),
                   item["image"].toString(),

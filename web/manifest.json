@@ -1,6 +1,6 @@
 {
-    "name": "demolocal1",
-    "short_name": "demolocal1",
+    "name": "myappfigma",
+    "short_name": "myappfigma",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

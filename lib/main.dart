@@ -1,13 +1,12 @@
-import 'dart:async';
-
-import 'package:demolocal1/gen/localization/l10n.dart';
-import 'package:demolocal1/save/AppPreferences.dart';
-import 'package:demolocal1/utils/router_constants.dart';
-import 'package:demolocal1/utils/routers.dart';
 import 'package:flutter/material.dart';
+import 'package:myappfigma/gen/localization/l10n.dart';
+import 'package:myappfigma/l10n/save/AppPreferences.dart';
+import 'package:myappfigma/utils/router_constants.dart';
+import 'package:myappfigma/utils/routers.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppPreferences.init();
   runApp(const MyApp());
@@ -54,13 +53,14 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class WelCome extends StatefulWidget {
+  const WelCome({super.key});
+
   @override
-  State<SplashScreen> createState() => _SC1State();
+  State<WelCome> createState() => _WelComeState();
 }
 
-class _SC1State extends State<SplashScreen> {
+class _WelComeState extends State<WelCome> {
   @override
   void initState() {
     super.initState();
@@ -73,7 +73,7 @@ class _SC1State extends State<SplashScreen> {
     if (show) {
       Navigator.of(context).pushNamed(scLoginRouter);
     } else {
-      Navigator.of(context).pushNamed(cs2Router);
+      Navigator.of(context).pushNamed(onbroadingRouter);
     }
   }
 
@@ -82,23 +82,133 @@ class _SC1State extends State<SplashScreen> {
     _showApp();
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Column(children: [
-        const Padding(padding: EdgeInsets.symmetric(vertical: 100)),
-        Image.asset('assets/SC4.jpg'),
-        const SizedBox(
-          height: 16,
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset('assets/img1.png'),
+            Container(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Customize the \n Illustrations with Blush",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        )),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text(
+                        "All the illustrations in this project were made with Blush, which means that you can customize them however you want! Follow these steps to learn how",
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                        )),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/install.png'),
+                        const Text(
+                            "Install the Blush Plugin to personalize all the illustrations in the file.\n Just select any illustration and you’ll see a button in the right panel \nto install or edit with Blush.",
+                            style: TextStyle(
+                                fontSize: 8, fontWeight: FontWeight.bold))
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/menu.png'),
+                        const Text(
+                            "Open the Blush plugin  from the Plugins menu or by right-clicking \nin the canvas and selecting the Plugins option. ",
+                            style: TextStyle(
+                                fontSize: 8, fontWeight: FontWeight.bold))
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/image.png'),
+                        const Text(
+                            "With the plugin open, select any of the images and you’ll see the \n options  to edit in the plugin window.",
+                            style: TextStyle(
+                                fontSize: 8, fontWeight: FontWeight.bold))
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/queen.png'),
+                        const Text(
+                            "Now you can customize the illlustrations and make the  design yours!",
+                            style: TextStyle(
+                                fontSize: 8, fontWeight: FontWeight.bold))
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      width: double.infinity,
+                      height: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xffBCF4F4)),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('PRO TIP',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text(
+                              "Do you want to get vectors as SVG? Or edit the colors and paths in your doodles? Then upgrade to the Pro Plan. Additionally, you’ll unlock over 10,000 illustrations.",
+                              style: TextStyle(
+                                  fontSize: 8, fontWeight: FontWeight.bold)),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                              "Use the coupon GET20 to get a 20% discount on checkout",
+                              style: TextStyle(
+                                  fontSize: 8, fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/SplashScreen');
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          fixedSize: const Size(200, 40),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50))),
+                      child: const Text('Install the Blush Plugin'),
+                    ),
+                  ]),
+            )
+          ],
         ),
-        Text(Str.of(context).appName,
-            style: const TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-            )),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 120)),
-      ])),
+      ),
     );
   }
 }
