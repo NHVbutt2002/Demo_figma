@@ -106,7 +106,9 @@ class _CourseLessonState extends State<CourseLesson> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Container(child: Image.asset('assets/Playicon.png')),
+                        Container(
+                          child: Image.asset('assets/Playicon.png'),
+                        ),
                       ],
                     ),
                   ),
